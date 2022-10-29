@@ -53,6 +53,12 @@ body._lock {
   max-width: 200px;
 }
 
+@media (max-width: 992px) {
+  .header__logo {
+    padding: 0 10px;
+  }
+}
+
 .header__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
