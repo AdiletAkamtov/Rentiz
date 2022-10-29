@@ -336,7 +336,7 @@ body._lock {
   color: #fff;
 }
 
-.filter__btn button._active {
+.filter__btn button:active {
   background-color: #15786C;
 }
 
