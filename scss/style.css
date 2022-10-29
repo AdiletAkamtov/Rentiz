@@ -26,13 +26,21 @@ ul {
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans';
   background-color: var(--bg-color);
   position: relative;
+  color: #fff;
 }
 
 body._lock {
   overflow: hidden;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-color);
 }
 
 .header {
@@ -229,6 +237,12 @@ body._lock {
   }
 }
 
+@media (max-width: 425px) {
+  .login {
+    display: none;
+  }
+}
+
 .register {
   background-color: var(--accent-color);
 }
@@ -236,6 +250,183 @@ body._lock {
 @media (any-hover: hover) {
   .register:hover {
     background-color: transparent;
+  }
+}
+
+.hero {
+  margin-top: clamp(1.875rem, 1.057rem + 4.09vw, 4.688rem);
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(700 / 1420 * 100%);
+          flex: 0 0 calc(700 / 1420 * 100%);
+  padding-bottom: 160px;
+}
+
+@media (max-width: 992px) {
+  .hero__content {
+    padding-bottom: 20px;
+  }
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: clamp(1.875rem, 1.184rem + 3.45vw, 4.25rem);
+  line-height: 1.26;
+  text-transform: capitalize;
+}
+
+.hero__text {
+  margin-top: 18px;
+}
+
+.hero__filter {
+  height: 100px;
+  width: 880px;
+  background-color: #fff;
+  margin-top: clamp(1.875rem, 1.33rem + 2.73vw, 3.75rem);
+  position: absolute;
+}
+
+.hero__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(700 / 1420 * 100%);
+          flex: 0 0 calc(700 / 1420 * 100%);
+}
+
+.filter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 165px;
+      grid-template-columns: 1fr 1fr 1fr 165px;
+  color: #000;
+}
+
+.filter__block:nth-child(2) {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+}
+
+.filter__btn {
+  padding: 5px;
+}
+
+.filter__btn button {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.filter__btn button._active {
+  background-color: #15786C;
+}
+
+.block-filter {
+  position: relative;
+  cursor: pointer;
+}
+
+.block-filter__button {
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-filter__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-filter__type {
+  padding-right: 2px;
+  font-size: 16px;
+  color: #858585;
+}
+
+.block-filter__icon {
+  width: 10px;
+  height: 7px;
+  background: url(../img/icons/fa6-solid_angle-down.svg) center bottom no-repeat;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.block-filter__icon._active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.block-filter__value {
+  color: var(--bg-color);
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.block-filter__dropdown {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.block-filter__dropdown._active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.block-filter__item {
+  padding: 10px;
+  -webkit-transition: all  .2s;
+  transition: all  .2s;
+}
+
+@media (any-hover: hover) {
+  .block-filter__item:hover {
+    background-color: #adadad;
   }
 }
 /*# sourceMappingURL=style.css.map */
