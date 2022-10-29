@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 //Def color
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +37,8 @@ body {
 
 
 .header {
-    padding: 40px 0;
+    padding: unquote("clamp(1.25rem, 0.886rem + 1.82vw, 2.5rem) 0;");
+    
 
     &__container {
         display: flex;
@@ -53,17 +54,28 @@ body {
     &__navigation {
         display: flex;
         align-items: center;
-        gap: 75px;
+        gap: unquote("clamp(1.25rem, -2.799rem + 8.436vw, 4.688rem);")
     }
 
     &__menu {
     }
 
     &__buttons {
+        display: flex;
+        gap: 5px;
     }
 
-    &__btn {
-    }
+	&__btn {
+		padding: 11px 20px;
+		color: #fff;
+		border: 2px solid var(--accent-color);
+		background-color: transparent;
+		transition: background-color 0.2s;
+		cursor: pointer;
+		@media (max-width: 576px) {
+			padding: 7px 15px;
+		}
+	}
 }
 .menu {
 
@@ -115,7 +127,19 @@ body {
     }
     
 }
-.register {
-}
+
 .login {
+    @media (any-hover: hover) {
+        &:hover{
+            background-color: var(--accent-color);
+        }
+    }
+}
+.register {
+    background-color: var(--accent-color);
+    @media (any-hover: hover) {
+        &:hover{
+            background-color: transparent;
+        }
+    }
 }
