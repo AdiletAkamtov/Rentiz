@@ -41,6 +41,13 @@ body {
     line-height: 1.7;
     color: var(--text-color)
 }
+.title{
+    font-weight: 600;
+    font-size: unquote("clamp(1.875rem, 1.548rem + 1.64vw, 3rem)");
+    line-height: 1.26;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
 
 //-----------------------------------Genetal end-----------------------------------//
 
@@ -241,13 +248,17 @@ body {
 }
 .hero {
     margin-top: unquote("clamp(1.25rem, 0.25rem + 5vw, 4.688rem)");
+    padding-bottom: unquote("clamp(1.25rem, -0.023rem + 6.36vw, 5.625rem)");
     position: relative;
 
 .hero-deco{
     position: absolute;
-    bottom: -240px;
+    bottom: -150px;
     right: 0;
     z-index: -1;
+    @media (max-width:576px) {
+        height: 300px;
+    }
 
 }
 
@@ -421,4 +432,96 @@ body {
             }
         }
     }
+}
+
+
+//------------------------featured-------------------------//
+
+.featured {
+    padding-top: unquote("clamp(1.25rem, -0.023rem + 15vw, 5.625rem)");
+    padding-bottom: unquote("clamp(1.875rem, -0.852rem + 13.64vw, 11.25rem)");
+
+    &__container {
+    }
+
+    &__title {
+
+    }
+
+    &__box {
+        margin-top: unquote("clamp(1.875rem, 1.42rem + 2.27vw, 3.438rem)");
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        overflow: auto;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+    }
+
+    &__img {
+    }
+}
+
+//------------------------ featured end-------------------------//
+
+
+//------------------------Popular -------------------------//
+.popular {
+    padding: unquote("clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 0"); 
+    background: #1A242F url("../img/sliderbg.png") center center/cover no-repeat;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__slider {
+    }
+}
+
+//------------------------ -------------------------//
+.popular-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+		&__thumb {
+		}
+
+		&__text {
+		}
+
+		&__title {
+		}
+
+		&__desc {
+		}
+
+		&__labels {
+		}
+
+		&__label {
+		}
+}
+
+
+
+
+
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.slider-buttons {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
 }
