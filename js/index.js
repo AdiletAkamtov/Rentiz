@@ -32,11 +32,20 @@ if (filter) {
 
 //-------------------------swiper-----------------//
 
-const swiper = new Swiper('.swiper', {
-
+const swiper = new Swiper('.popular-slider', {
+    spaceBetween: 20,
+    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+        },
+        660: {
+            slidesPerView: 2,
+        }
+    }
   
   });
