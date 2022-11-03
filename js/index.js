@@ -32,7 +32,7 @@ if (filter) {
 
 //-------------------------swiper-----------------//
 
-const swiper = new Swiper('.popular-slider', {
+const popularSlider = new Swiper('.popular-slider', {
     spaceBetween: 20,
     slidesPerView: 1,
     navigation: {
@@ -47,5 +47,17 @@ const swiper = new Swiper('.popular-slider', {
             slidesPerView: 2,
         }
     }
+  
+  });
+
+//-------------------------swiper reviews-----------------//
+const reviewsSlider = new Swiper('.slider-reviews', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    autoHeight:true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   
   });
