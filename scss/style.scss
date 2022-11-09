@@ -26,6 +26,7 @@ ul{
 }
 
 body {
+    z-index: -5;
     font-family: 'Work Sans';
     background-color: var(--bg-color);
     position: relative;
@@ -770,3 +771,63 @@ body {
 
 //------------------------ reviews end-------------------------//
 
+
+//------------------------gallery strat -------------------------//
+
+.gallery {
+    background: linear-gradient(270deg, #1A242F 0.01%, rgba(26, 36, 47, 0) 82.97%);
+    padding: unquote("clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 0");
+    z-index: -5;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        width: 350px;
+        aspect-ratio:7/11;
+        .swiper-wrapper{
+            position: relative;
+        }
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__info {
+    }
+
+    &__title {
+        max-width: 520px;
+    }
+
+    &__text {
+        margin-top: 22px;
+    }
+
+    &__link {
+        margin-top: 45px;
+        padding: 22px 42px;
+        display: inline-block;
+        background-color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: capitalize;
+        color: #fff;
+    }
+}
+.title {
+}
+.text {
+}
