@@ -914,15 +914,15 @@ body {
 
 .footer {
 	background-color: #1a242f;
-	padding-top: clamp(1.875rem, -0.125rem + 10vw, 8.75rem);
+	padding-top: unquote("clamp(1.875rem, -0.125rem + 10vw, 8.75rem)");
 	// .footer__main
 	&__main {
-		padding-bottom: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
+		padding-bottom: unquote("clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);")
 	}
 	.main-footer__container {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		gap: clamp(1.875rem, -14.494rem + 26.19vw, 8.75rem);
+		gap: unquote("clamp(1.875rem, -14.494rem + 26.19vw, 8.75rem)");
 		@media (max-width: 992px) {
 			grid-template-columns: repeat(4, 1fr);
 		}
